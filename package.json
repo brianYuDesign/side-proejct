@@ -1,0 +1,24 @@
+{
+  "name": "side-project",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "node -r esm index.js",
+    "dev": "NODE_ENV=development nodemon -r esm"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "apollo-server-express": "^2.9.13",
+    "dotenv": "^8.2.0",
+    "esm": "^3.2.25",
+    "graphql": "^14.5.8",
+    "mongoose": "^5.8.1",
+    "passport": "^0.4.1",
+    "passport-facebook-token": "^3.3.0",
+    "passport-google-token": "^0.1.2",
+    "winston": "^3.2.1"
+  }
+}
