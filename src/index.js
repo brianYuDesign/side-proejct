@@ -4,7 +4,7 @@ import express from "express"
 import env from "dotenv"
 import typeDefs from "./graphql/typeDefs"
 import resolvers from "./graphql/resolvers"
-
+import "./database"
 env.config()
 
 const { NODE_ENV, PORT } = process.env
