@@ -24,6 +24,10 @@ const userSchema = new Schema(
     role: {
       type: String,
       enum: ROLE_LIST
+    },
+    isEnabled: {
+      type: Boolean,
+      default: true
     }
   },
   { timestamps: true }

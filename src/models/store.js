@@ -14,7 +14,11 @@ const storeSchema = new Schema(
           type: Date
         }
       }
-    ]
+    ],
+    isEnabled: {
+      type: Boolean,
+      default: true
+    }
   },
   { timestamps: true }
 )

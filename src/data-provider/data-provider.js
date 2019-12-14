@@ -7,7 +7,7 @@ export default model => {
     create: input => model.create(input),
     update: (id, input) => model.findByIdAndUpdate(id, input, { new: true }),
     delete: async id => {
-      await model.remove({ _id: id })
+      await model.findByIdAndUpdate(id, { isEnabled: false }, { new: true })
       return id
     }
   }
