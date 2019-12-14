@@ -1,7 +1,7 @@
 import mongoose, { Schema } from "mongoose"
-import { ROLE_LIST, USER_AREA_LIST } from "../constants"
+import { BOOKING_STATUS_LIST } from "../constants"
 
-const userSchema = new Schema(
+const bookingSchema = new Schema(
   {
     party: {
       type: Number
@@ -9,18 +9,22 @@ const userSchema = new Schema(
     bookingTime: {
       type: Date
     },
-    user: {
-      type: Schema.Types.ObjectId,
-      ref: "User"
+    status: {
+      type: String,
+      enum: BOOKING_STATUS_LIST
     },
     store: {
       type: Schema.Types.ObjectId,
       ref: "Store"
+    },
+    user: {
+      type: Schema.Types.ObjectId,
+      ref: "User"
     }
   },
   { timestamps: true }
 )
 
-const User = mongoose.model("User", userSchema)
+const Booking = mongoose.model("Booking", bookingSchema)
 
-export default User
+export default Booking

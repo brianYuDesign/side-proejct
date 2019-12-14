@@ -1,20 +1,24 @@
 import mongoose, { Schema } from "mongoose"
 
-const store = new Schema(
+const storeSchema = new Schema(
   {
     name: {
       type: String
     },
-    startTime: {
-      type: Date
-    },
-    closeTime: {
-      type: Date
-    }
+    businessHour: [
+      {
+        startTime: {
+          type: Date
+        },
+        closeTime: {
+          type: Date
+        }
+      }
+    ]
   },
   { timestamps: true }
 )
 
-const Store = mongoose.model("Store", store)
+const Store = mongoose.model("Store", storeSchema)
 
 export default Store
