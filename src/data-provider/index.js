@@ -1,8 +1,8 @@
 import dataProvider from "./data-provider"
-import { user, store, booking } from "../models"
+import { User, Store, Booking } from "../models"
 
 export default {
-  userProvider: dataProvider(user),
-  storeProvider: dataProvider(store),
-  bookingProvider: dataProvider(booking)
+  userProvider: dataProvider(User),
+  storeProvider: dataProvider(Store),
+  bookingProvider: dataProvider(Booking)
 }

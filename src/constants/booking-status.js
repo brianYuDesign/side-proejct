@@ -1,3 +1,4 @@
+import _ from "lodash"
 export const BOOKING_STATUS_CREATED = "CREATED"
 export const BOOKING_STATUS_CANCEL = "CANCEL"
 

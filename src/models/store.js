@@ -23,6 +23,4 @@ const storeSchema = new Schema(
   { timestamps: true }
 )
 
-const Store = mongoose.model("Store", storeSchema)
-
-export default Store
+export default mongoose.model("Store", storeSchema)

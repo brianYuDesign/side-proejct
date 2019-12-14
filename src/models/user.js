@@ -19,7 +19,7 @@ const userSchema = new Schema(
       lowercase: true
     },
     googleId: {
-      type: Stirng
+      type: String
     },
     role: {
       type: String,
@@ -33,6 +33,4 @@ const userSchema = new Schema(
   { timestamps: true }
 )
 
-const User = mongoose.model("User", userSchema)
-
-export default User
+export default mongoose.model("User", userSchema)
