@@ -5,6 +5,10 @@ export default model => {
     getByFilter: filter => model.find(filter),
     getOne: filter => model.findOne(filter),
     create: input => model.create(input),
-    update: (id, input) => model.findByIdAndUpdate(id, input)
+    update: (id, input) => model.findByIdAndUpdate(id, input, { new: true }),
+    delete: async id => {
+      await model.remove({ _id: id })
+      return id
+    }
   }
 }
