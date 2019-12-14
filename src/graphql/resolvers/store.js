@@ -3,7 +3,7 @@ import dataProvider from "../../data-provider"
 const { storeProvider, bookingProvider } = dataProvider
 export default (provider = storeProvider) => ({
   Query: {
-    stores: () => provider.getByFilter({ isEnable: true }),
+    stores: () => provider.getByFilter({ isEnabled: true }),
     store: (_, { id }) => provider.getById(id)
   },
   Mutation: {

@@ -3,7 +3,7 @@ import dataProvider from "../../data-provider"
 const { userProvider, bookingProvider } = dataProvider
 export default (provider = userProvider) => ({
   Query: {
-    users: () => provider.getByFilter({ isEnable: true }),
+    users: () => provider.getByFilter({ isEnabled: true }),
     user: (_, { id }) => provider.getById(id)
   },
   Mutation: {
