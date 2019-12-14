@@ -4,5 +4,5 @@ import { user, store, booking } from "../models"
 export default {
   userProvider: dataProvider(user),
   storeProvider: dataProvider(store),
-  booking: dataProvider(booking)
+  bookingProvider: dataProvider(booking)
 }
