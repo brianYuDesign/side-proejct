@@ -5,6 +5,7 @@ import env from "dotenv"
 import typeDefs from "./graphql/typeDefs"
 import resolvers from "./graphql/resolvers"
 import "./database"
+import auth from "./services/auth"
 env.config()
 
 const { NODE_ENV, PORT } = process.env
@@ -15,7 +16,7 @@ const server = new ApolloServer({
   context: async ({ req }) => {
     const accessToken = req.headers["access-token"]
     if (accessToken) {
-      //return { user: AuthService.getUserFromAccessToken()}
+      return { user: auth.validateAccessToken(accessToken) }
     }
     return undefined
   }
