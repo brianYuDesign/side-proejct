@@ -17,6 +17,7 @@
     "express": "^4.17.1",
     "graphql": "^14.5.8",
     "graphql-scalars": "^1.0.4",
+    "lodash": "^4.17.15",
     "mongoose": "^5.8.1",
     "passport": "^0.4.1",
     "passport-facebook-token": "^3.3.0",
